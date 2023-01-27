@@ -46,4 +46,6 @@ inherit_from:
 No need to authenticate when using `inherit_from`. There's nothing here that needs hiding.
 
 ### Q: How do I update my cached copy?
-
+```
+rm .rubocop-https*
+```
