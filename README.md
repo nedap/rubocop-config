@@ -1,49 +1,49 @@
-# ⚪ Repository name, title
+# 🚔 RuboCop-Config
 
-*All names, internal and external of this project*
+RuboCop config for Healthcare.
 
-*Short description that describes the project*
-
-*Screenshot*
+This is explicitly for Rails projects at the moment.
 
 ## 🎯 Goal and history
 
-*Goal of the project*
+RuboCop provides valuable feedback to Ruby developers, which can both improve code quality and developers' breadth of knowledge of the language. It also provides various formatting rules and is therefore a common source of holy wars and [yak shaving](https://en.wiktionary.org/wiki/yak_shaving).
 
-*History of the project*
+We use [rubyfmt](https://github.com/fables-tales/rubyfmt) for auto-formatting, but want to make sure that RuboCop does not complain about rubyfmt-formatted code. Enter: this configuration.
 
-## 📑 Documentation
-
-*Relevant technical, design and user documentation* 
+Any additional rules added on top of this configuration should be well-thought-out and agreed-upon. We don't want RuboCop needlessly getting in our way, but we do want some of the advantages it can bring.
 
 ## ✍ Contributing
 
-*Documentation on collaboration and contributing to this project*
+Want change? Make an issue first and discuss. We will push back on rule changes unless you make a compelling case.
 
 ## 💾 Installation
 
-*How to install the project locally? Describe dependencies, tools and scripts*
+1. Add to Gemfile in the development group:
+```ruby
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+```
+2. Create a `.rubocop.yml` and populate it with this content:
+```yml
+inherit_from:
+  https://raw.github.com/nedap/rubocop-config/main/rubocop.yml
+```
 
 ## 👷 Maintainers
 
-*Who maintains this project*
+- [Platform Tribe Team 5](https://github.com/orgs/nedap/teams/platform-tribe-team-5)
 
 ## 📂 Related documents
 
-*Links to relevant un/official documents related to this project*
-
-## 🚚 Deployment
-
-*Describe the steps needed to deploy the project*
-
-## 📈 Monitoring
-
-*Describe how to get an overview of the performance and features of the deployed project*
-
-## 🏗 Architecture
-
-*Describe how the project is designed and set up. Name frameworks, dependencies, applications explicitly.*
+- [RuboCop documentation](https://docs.rubocop.org/rubocop/index.html)
+- [RuboCop Rails documentation](https://docs.rubocop.org/rubocop-rails/index.html)
+- [RuboCop RSpec documentation](https://docs.rubocop.org/rubocop-rspec/cops_rspec.html)
 
 ## ⁉ FAQ
 
-*Describe known problems and solutions that maintainers, users or contributors to this project may run into.*
+### Q: Why is this repository public?
+No need to authenticate when using `inherit_from`. There's nothing here that needs hiding.
+
+### Q: How do I update my cached copy?
+
