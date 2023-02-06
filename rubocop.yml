@@ -6,6 +6,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - db/**/*
+    - bin/**/*
 Style:
   Enabled: false
 Layout:
