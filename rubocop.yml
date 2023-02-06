@@ -5,6 +5,10 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - .git/**/*
     - db/**/*
     - bin/**/*
 Style:
