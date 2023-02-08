@@ -21,6 +21,11 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Enabled: false
 
+# Default example length of 5 is needlessly low.
+# Writing good, short specs is hard.
+RSpec/ExampleLength:
+  Max: 15
+
 # Disabled because rubyfmt breaks on this syntax.
 # To re-enable when fixed.
 Naming/BlockForwarding:
