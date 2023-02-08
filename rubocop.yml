@@ -20,3 +20,8 @@ Metrics/BlockLength:
     - spec/**/*_spec.rb
 Metrics/ClassLength:
   Enabled: false
+
+# Disabled because rubyfmt breaks on this syntax.
+# To re-enable when fixed.
+Naming/BlockForwarding:
+  Enabled: false
