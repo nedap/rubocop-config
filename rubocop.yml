@@ -18,6 +18,7 @@ Layout:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*_spec.rb
+    - ./**/*.rake
 Metrics/ClassLength:
   Enabled: false
 
@@ -37,4 +38,3 @@ Rails/FilePath:
 # To re-enable when fixed.
 Naming/BlockForwarding:
   Enabled: false
-
