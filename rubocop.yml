@@ -1,5 +1,4 @@
 require:
-  - rubocop-rails
   - rubocop-rspec
 
 AllCops:
@@ -26,13 +25,6 @@ Metrics/ClassLength:
 # Writing good, short specs is hard.
 RSpec/ExampleLength:
   Max: 15
-
-# This rule was historically misguided in believing that slashes
-# in a Pathname were incompatible cross-platform (i.e. it's fine).
-# To maintain both styles, we're disabling an enforcement.
-# See also: https://github.com/rubocop/rubocop-rails/pull/128
-Rails/FilePath:
-  Enabled: false
 
 # Disabled because rubyfmt breaks on this syntax.
 # To re-enable when fixed.

@@ -12,6 +12,8 @@ We use [rubyfmt](https://github.com/fables-tales/rubyfmt) for auto-formatting, b
 
 Any additional rules added on top of this configuration should be well-thought-out and agreed-upon. We don't want RuboCop needlessly getting in our way, but we do want some of the advantages it can bring.
 
+There are two rubocop configurations here: the base, `rubocop.yml`, is suited for vanilla Ruby applications or gems; `rails.yml` builds upon `rubocop.yml` and offers additional Rails-specific rules, which should be used for Rails applications.
+
 ## ✍ Contributing
 
 Want change? Make an issue first and discuss. We will push back on rule changes unless you make a compelling case.
@@ -21,13 +23,20 @@ Want change? Make an issue first and discuss. We will push back on rule changes 
 1. Add to Gemfile in the development group:
 ```ruby
   gem "rubocop", require: false
-  gem "rubocop-rails", require: false
+  # gem "rubocop-rails", require: false # if you're using Rails
   gem "rubocop-rspec", require: false
 ```
-2. Create a `.rubocop.yml` and populate it with this content:
+2. Create a `.rubocop.yml` and populate it with your inherit. For a non-Rails app or gem, use:
+
 ```yml
 inherit_from:
   https://raw.github.com/nedap/rubocop-config/main/rubocop.yml
+```
+For a Rails app, use:
+
+```yml
+inherit_from:
+  https://raw.github.com/nedap/rubocop-config/main/rails.yml
 ```
 
 ## 👷 Maintainers
