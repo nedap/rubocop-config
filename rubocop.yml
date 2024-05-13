@@ -30,3 +30,9 @@ RSpec/ExampleLength:
 # To re-enable when fixed.
 Naming/BlockForwarding:
   Enabled: false
+
+# You might want empty blocks in tests.
+Lint/EmptyBlock:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
