@@ -1,7 +1,7 @@
 inherit_from:
   https://raw.github.com/nedap/rubocop-config/main/rubocop.yml
 
-require:
+plugins:
   - rubocop-rails
 
 # This rule was historically misguided in believing that slashes
